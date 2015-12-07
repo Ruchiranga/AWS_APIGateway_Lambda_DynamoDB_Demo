@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="petStoreApp">
+	<head>
+		<title>Pet Store App</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script type="text/javascript" src="controller/controller.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	</head>
+
+	<body ng-controller="AppCtrl">
+		<div class="container">
+			<div class="row text-center">
+				<font size="6">Pet Store Demo</font>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<!-- <div class="text-center"><font size="4">Master</font></div>
+					<hr> -->
+					<ol class="breadcrumb text-center">
+						<li class="active">Master</li>
+					</ol>
+					<table class="table table-hover" ng-init="fetchMasters()">
+						<!-- <thead>
+							<tr>
+								<th class="text-center">
+									
+								</th>
+							</tr>
+						</thead> -->
+						<tbody>
+							<tr ng-repeat="master in masters">
+								<td>{{master.master_name}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-10">
+					<div class="row">
+						<ol class="breadcrumb">
+							<li class="active">Pet Details</li>
+						</ol>	
+					</div>
+					<div class="container">
+						<div>
+							<p>Pet ID : {{currentPet.id}}</p>
+							<p>Pet Type : {{currentPet.type}}</p>
+							<p>Pet Name : {{currentPet.name}}</p>
+							<p>Pet Age : {{currentPet.age}}</p>
+						</div>
+					</div>
+					
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
